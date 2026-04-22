@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ToDo Project</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="container">
+    <h1>My Todo App</h1>
+
+    <!-- Input area -->
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Write Any Work..." />
+      <button id="addBtn">Add</button>
+    </div>
+
+    <div class="priority">
+      <span>Priority</span>
+      <button class="prio-btn active-high" data-p="high"="">High</button>
+      <button class="prio-btn" data-p="med"="">Medium</button>
+      <button class="prio-btn" data-p="low"="">Low</button>
+    </div>
+
+    <div class="action-btns">
+      <button class="edit-btn">✎</button>
+      <button class="delete-btn">✕</button>
+     </div>
+
+    <!-- Tasks yahan aayenge -->
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

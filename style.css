@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.container {
+  background: white;
+  width: 460px;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.input-area {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #534AB7;
+  box-shadow: 0 0 0 2px rgba(83,74,183,0.15);
+}
+
+button#addBtn {
+  padding: 10px 16px;
+  background: #534AB7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button#addBtn:hover {
+  background: #3C3489;
+}
+
+/* Priority buttons */
+.priority-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #888;
+}
+
+.prio-btn {
+  padding: 4px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  background: white;
+  color: #555;
+}
+
+.prio-btn.active-high {
+  background: #FCEBEB;
+  color: #A32D2D;
+  border-color: #F09595;
+}
+
+.prio-btn.active-med {
+  background: #FAEEDA;
+  color: #854F0B;
+  border-color: #FAC775;
+}
+
+.prio-btn.active-low {
+  background: #EAF3DE;
+  color: #3B6D11;
+  border-color: #C0DD97;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* Priority badges */
+.prio-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.badge-high { background: #FCEBEB; color: #A32D2D; }
+.badge-med  { background: #FAEEDA; color: #854F0B; }
+.badge-low  { background: #EAF3DE; color: #3B6D11; }
+
+/* Action buttons */
+.action-btns {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+li:hover .action-btns {
+  opacity: 1;
+}
+
+.edit-btn, .delete-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-btn {
+  background: #f0f0f0;
+  color: #555;
+}
+
+.edit-btn:hover {
+  background: #e0e0f0;
+  color: #534AB7;
+}
+
+.delete-btn {
+  background: #FCEBEB;
+  color: #A32D2D;
+}
+
+.delete-btn:hover {
+  background: #F09595;
+  color: #501313;
+}
+
+/* Edit mode */
+.edit-input {
+  flex: 1;
+  font-size: 14px;
+  padding: 4px 8px;
+  border: 1px solid #534AB7;
+  border-radius: 6px;
+  outline: none;
+}
+
+.save-btn {
+  padding: 4px 10px;
+  background: #534AB7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.save-btn:hover {
+  background: #3C3489;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #534AB7;
+  flex-shrink: 0;
+}
+
+/* Empty message */
+.empty-msg {
+  text-align: center;
+  color: #bbb;
+  font-size: 13px;
+  padding: 20px 0;
+}
